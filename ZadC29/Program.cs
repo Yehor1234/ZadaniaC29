@@ -10,17 +10,6 @@ class PlikGłówny
         tablica.Sortowanie_babelkowe(tab);
         tablica.Wyswietl(tab);
 
-        bool przeszukanie = tablica.Przeszukaj(tab)
-            if(przeszukanie == true )
-        {
-            Console.WriteLine("Liczba jest w tablicy");
-        }
-            else
-        {
-
-            Console.WriteLine("Liczby nie ma w tablicy");
-                
-                
-                }
+        tablica.Przeszukaj(tab);
     }
 }

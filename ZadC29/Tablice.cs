@@ -28,11 +28,13 @@ namespace ZadC29
             }
             return ints;
         }
+        public void Sortowanie_babelkowe(int[] tablica)
         {
          
             for (int i = 0;i < tablica.Length;i++)
             {
                 for (int j = 1; j<tablica.Length-i;j++)
+                {
                     if (tablica[j-1] > tablica[j])
                     {
                         int temp = tablica[j-1]; tablica[j-1] = tablica[j]; tablica[j] = temp ;
@@ -40,18 +42,30 @@ namespace ZadC29
                 }
             }
         }
-        public bool Przeszukaj(int[] tab)
+        public void Przeszukaj(int[] tab)
         {
          Console.WriteLine("Jakiej liczby szukasz w tablicy? ");
             int szukana = int.Parse(Console.ReadLine());
-            for(int i = 0; i < tab.Length ; i++)
-            {
-                if (tab[i] == szukana)
+            bool liczba_istnieje = false;
+            int ile_razy = 0;
+            for (int i = 0; i<tab.Length ; i++) {
+             if (tab[i] == szukana)
                 {
-                    return true;
+                    liczba_istnieje= true;
+                    ile_razy++;
                 }
+                
+            
             }
-            return false;
+            if (liczba_istnieje) 
+            {
+                Console.WriteLine($"liczba występuje w tablicy {ile_razy} ");
+            }
+            else 
+            {
+                Console.WriteLine("Liczba nie występuje w tablicy");
+                    
+           }
         }
     }
 }
