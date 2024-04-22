@@ -6,10 +6,21 @@ class PlikGłówny
     {
     Tablice tablica = new Tablice();
         int[] tab = tablica.Tworzenie_tablicy();
+        tablica.Wyswietl(tab);
+        tablica.Sortowanie_babelkowe(tab);
+        tablica.Wyswietl(tab);
 
-        for (int i = 0; i < tab.Length; i++)
+        bool przeszukanie = tablica.Przeszukaj(tab)
+            if(przeszukanie == true )
         {
-            Console.WriteLine(tab[i]);
+            Console.WriteLine("Liczba jest w tablicy");
         }
+            else
+        {
+
+            Console.WriteLine("Liczby nie ma w tablicy");
+                
+                
+                }
     }
 }

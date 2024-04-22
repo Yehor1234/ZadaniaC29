@@ -28,5 +28,30 @@ namespace ZadC29
             }
             return ints;
         }
+        {
+         
+            for (int i = 0;i < tablica.Length;i++)
+            {
+                for (int j = 1; j<tablica.Length-i;j++)
+                    if (tablica[j-1] > tablica[j])
+                    {
+                        int temp = tablica[j-1]; tablica[j-1] = tablica[j]; tablica[j] = temp ;
+                    }
+                }
+            }
+        }
+        public bool Przeszukaj(int[] tab)
+        {
+         Console.WriteLine("Jakiej liczby szukasz w tablicy? ");
+            int szukana = int.Parse(Console.ReadLine());
+            for(int i = 0; i < tab.Length ; i++)
+            {
+                if (tab[i] == szukana)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
